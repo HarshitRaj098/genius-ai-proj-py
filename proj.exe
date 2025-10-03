@@ -1,0 +1,10 @@
+from PIL import Image, ImageTk
+
+try:
+    img_data = Image.open("banner.jpg")
+    img_data = img_data.resize((250, 250))
+    banner_img = ImageTk.PhotoImage(img_data)
+    label_img = tk.Label(root, image=banner_img)
+    label_img.pack(pady=5)
+except:
+    pass
